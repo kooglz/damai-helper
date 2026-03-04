@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadConfig() {
+    fun loadConfig() {
         val prefs = getSharedPreferences("damai_config", MODE_PRIVATE)
         val saleTime = prefs.getString(CONFIG_KEY_SALE_TIME, DEFAULT_SALE_TIME) ?: DEFAULT_SALE_TIME
         val priceLevel = prefs.getString(CONFIG_KEY_PRICE_LEVEL, DEFAULT_PRICE_LEVEL) ?: DEFAULT_PRICE_LEVEL

@@ -9,7 +9,9 @@ import android.os.Looper
 import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
+import androidx.core.app.NotificationCompat
 import com.damai.assistant.MainActivity
+import com.damai.assistant.R
 
 /**
  * 大麦无障碍抢票服务
@@ -344,11 +346,11 @@ class AccessibilityService : AccessibilityService() {
     }
 
     private fun sendCompletionNotification() {
-        val notification = android.app.NotificationCompat.Builder(this, TicketGrabService.CHANNEL_ID)
+        val notification = NotificationCompat.Builder(this, TicketGrabService.CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle("✅ 订单已提交！")
             .setContentText("请在 15 分钟内完成支付")
-            .setPriority(android.app.NotificationCompat.PRIORITY_HIGH)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
             .build()
 
