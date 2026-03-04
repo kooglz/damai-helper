@@ -28,11 +28,11 @@ jobs:
         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      working-directory: ./android-app
+      working-directory: ./damai-helper/android-app
       
     - name: Build Debug APK
       run: ./gradlew assembleDebug
-      working-directory: ./android-app
+      working-directory: ./damai-helper/android-app
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
