@@ -1,0 +1,2 @@
+# This is a placeholder file. The actual gradle-wrapper.jar will be downloaded by GitHub Actions.
+# DO NOT commit this file - GitHub Actions will use the official Gradle wrapper.
