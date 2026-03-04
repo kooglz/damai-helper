@@ -28,11 +28,9 @@ jobs:
         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      working-directory: ./android-app
       
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
-      working-directory: ./android-app
+      run: cd android-app && ./gradlew assembleDebug
       
     - name: Upload APK
       uses: actions/upload-artifact@v4
